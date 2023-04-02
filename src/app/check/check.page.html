@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar color="warning">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            ตรวจสอบผลการสมัคร ปีการศึกษา 1/2566
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="box">
+        <div class="img-box">
+            <img class="img" src="assets/ero.png">
+        </div>
+        <ion-list>
+            <div class="ato">
+                <ion-title class="d">
+                    ตรวจสอบผลการสมัคร ปีการศึกษา 1/2566
+                </ion-title>
+                <ion-title class="d1">
+                    STUDENT ADMISSION SYSTEM
+                </ion-title>
+            </div>
+            <div class="Input">
+                <ion-item class="d2">
+                    <ion-label>รหัสประจำตัวประชาชน</ion-label>
+                    <ion-input [(ngModel)]="idcard"></ion-input>
+                </ion-item>
+            </div>
+            <div class="Input">
+                <ion-item class="d2">
+                    <ion-label>วัดเกิด</ion-label>
+                    <ion-input type="date" [(ngModel)]="birthday"></ion-input>
+                </ion-item>
+            </div>
+            <div class="c1">
+                <ion-button shape="round" (click)="Search()">ค้นหา</ion-button>
+                <ion-button shape="round" (click)="Clear()">เริ่มใหม่</ion-button>
+            </div>
+        </ion-list>
+    </div>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>ผลการสมัคร ปีการศึกษา 1/2566</ion-card-title>
+            <ion-card-subtitle>STUDENT ADMISSION SYSTEM</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content class="c2">
+            <div>{{ data.idcard }}</div>
+            <div>{{ data.firstname }} {{ data.lastname }} </div>
+            <div>{{ data.dep }}</div>
+            <div>{{ data.status_name}}</div>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

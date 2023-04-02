@@ -1,0 +1,276 @@
+<ion-header>
+    <ion-toolbar color="warning">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            สมัครเรียน (ปีการศึกษา 1/2566)
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="box">
+        <div class="img-box">
+            <img class="img" src="assets/ero.png">
+        </div>
+        <ion-list>
+            <div class="ato">
+                <ion-title class="d">
+                    สมัครเรียน (ปีการศึกษา 1/2566)
+                </ion-title>
+                <ion-title class="d1">
+                    ระดับ ปวช. ปวส. และ หลักสูตรปริญญาตรี
+                </ion-title>
+            </div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-select placeholder="คำนำหน้า" [(ngModel)]="title">
+                                <ion-select-option value="นาย">นาย</ion-select-option>
+                                <ion-select-option value="นางสาว">นางสาว</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ชื่อ</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="firstname"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">นามสกุล</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="lastname"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">รหัสบัตรประชาชน</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="idcard" (ionBlur)="onBlur()"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-row>
+                        <ion-col>
+                            <ion-item fill="outline">
+                                <ion-select placeholder="เพศ" [(ngModel)]="sex">
+                                    <ion-select-option value="เพศชาย">เพศชาย</ion-select-option>
+                                    <ion-select-option value="เพศหญิง">เพศหญิง</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">วันเกิด </ion-label>
+                            <ion-input type="date"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">สัญชาติ</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="nation"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ศาสนา</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="relig"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ความพิการ</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="disab"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ความสามารถพิเศษ</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="talent"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ชื่อ-นามสกุล บิดา</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="fhname"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">อาชีพบิดา</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="fhoccup"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ชื่อ-นามสกุล มารดา</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="mhname"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">อาชีพมารดา</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="mhoccup"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-title class="d2">
+                    ที่อยู่ปัจจุบัน
+                </ion-title>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">บ้านเลขที่</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address1"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ซอย</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address2"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">หมู่</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address3"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ถนน</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address4"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">ตำบล</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address5"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">อำเภอ</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address6"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">จังหวัด</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address7"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">รหัสไปรษณีย์</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="address8"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">อีเมล</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="email"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">โทรศัพท์มือถือนักศึกษา</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="phone"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-title class="d3">
+                    การศึกษา
+                </ion-title>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">โรงเรียนเดิม</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="finish"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">เกรดเฉลี่ยสะสม</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="grade"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">สมัครโดยใช้คุณวุฒิ</ion-label>
+                            <ion-input placeholder="Enter text" [(ngModel)]="apply"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-title class="d4">
+                    แผนกการเรียน
+                </ion-title>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-select placeholder="----เลือก----" [(ngModel)]="dep">
+                                <ion-select-option value="คอมพิวเตอร์ธุรกิจ">คอมพิวเตอร์ธุรกิจ</ion-select-option>
+                                <ion-select-option value="การบัญชี">การบัญชี</ion-select-option>
+                                <ion-select-option
+                                    value="เทคโนโลยีแฟชั่นและสิ่งทอ">เทคโนโลยีแฟชั่นและสิ่งทอ</ion-select-option>
+                                <ion-select-option value="คอมพิวเตอร์ธุรกิจ">เทคโนโลยีความงาม</ion-select-option>
+                                <ion-select-option value="การบัญชี">ภาษาต่างประเทศธุรกิจ</ion-select-option>
+                                <ion-select-option value="เทคโนโลยีแฟชั่นและสิ่งทอ">ช่างยนต์</ion-select-option>
+                                <ion-select-option value="ช่างกลโรงงาน">ช่างกลโรงงาน</ion-select-option>
+                                <ion-select-option value="เชื่อมโลหะ">เชื่อมโลหะ</ion-select-option>
+                                <ion-select-option value="เทคนิคพื้นฐาน">เทคนิคพื้นฐาน</ion-select-option>
+                                <ion-select-option value="ไฟฟ้ากำลัง">ไฟฟ้ากำลัง</ion-select-option>
+                                <ion-select-option
+                                    value="อิเล็กทรอนิกส์อุตสาหกรรม">อิเล็กทรอนิกส์อุตสาหกรรม</ion-select-option>
+                                <ion-select-option value="อาหารและโภชนาการ">อาหารและโภชนาการ</ion-select-option>
+                                <ion-select-option value="สามัญสัมพันธ์">สามัญสัมพันธ์</ion-select-option>
+                                <ion-select-option value="เทคโนโลยีสารสนเทศ">อาหารและโภชนาการ</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-title class="d5">
+                    ส่งเอกสาร
+                </ion-title>
+                <ion-row>
+                    <ion-col>
+                        <ion-item fill="outline">
+                            <ion-label position="floating">บัตรประชาชน</ion-label>
+                            <ion-input type="file" placeholder="Enter text" [(ngModel)]="image1"></ion-input>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+                <ion-col>
+                    <ion-item fill="outline">
+                        <ion-label position="floating">สำเนาทะเบียนบ้าน</ion-label>
+                        <ion-input type="file" placeholder="Enter text" [(ngModel)]="image2"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item fill="outline">
+                        <ion-label position="floating">ใบรายงานผลการศึกษา</ion-label>
+                        <ion-input type="file" placeholder="Enter text" [(ngModel)]="image3"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-grid>
+            <div class="button">
+                <ion-button shape="round" (click)="Add()">ส่งข้อมูล</ion-button>
+                <ion-button shape="round" (click)="Clear()">เริ่มใหม่</ion-button>
+            </div>
+
+            <ion-list>

@@ -1,0 +1,7 @@
+{
+  "name": "saving",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

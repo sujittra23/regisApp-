@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="warning">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            แอพพิเคชั่นสมัครเรียนออนไลน์
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="content">
+        <div class="menu">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <a (click)="GoToMenu()" class="menu-item">
+                            <ion-icon class="icon" name="fast-food-outline"></ion-icon>
+                            <div class="menu-name">เลือกอาหาร</div>
+                        </a>
+                    </ion-col>
+                    <ion-col>
+                        <a (click)="GoToHistory()" class="menu-item">
+                            <ion-icon class="icon" name="time-outline"></ion-icon>
+                            <div class="menu-name">ประวัติการสั่งซื้อ</div>
+                        </a>
+                    </ion-col>
+                    <ion-col>
+                        <a class="menu-item">
+                            <ion-icon class="icon" name="cart-outline"></ion-icon>
+                            <div class="menu-name">ตะกร้าสินค้า</div>
+                        </a>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div class="button">
+            <ion-button expand="block" size="large" (click)="Logout()" color="danger">ออกจากระบบ</ion-button>
+        </div>
+    </div>
+</ion-content>
